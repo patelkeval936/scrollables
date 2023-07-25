@@ -39,29 +39,34 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Instagram()));
-            }, child:  Text('Instagram screen')),
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ArtAndCulture()));
-            }, child:  Text('Art And Culture')),
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const PracticalOfExtent()));
-            }, child:  Text('cache extent')),
-
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FileVsMemory()));
-            }, child:  Text('File vs Memory image')),
-
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AnimateToIndex()));
-            }, child:  Text('Animate to index')),
-
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Instagram()));
+                },
+                child: const Text('Instagram screen')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ArtAndCulture()));
+                },
+                child: const Text('Art And Culture')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const PracticalOfExtent()));
+                },
+                child: const Text('cache extent')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FileVsMemory()));
+                },
+                child: const Text('File vs Memory image')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AnimateToIndex()));
+                },
+                child: const Text('Animate to index')),
           ],
         ),
       ),
     );
   }
 }
-
-

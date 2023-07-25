@@ -17,14 +17,13 @@ class _FileVsMemoryState extends State<FileVsMemory> {
 
   void saveAsFile(){
     Uri uri = Uri.parse('https://svs.gsfc.nasa.gov/vis/a030000/a030800/a030877/frames/5760x3240_16x9_01p/BlackMarble_2016_928m_india_labeled.png');
-    //print('inside save as file');
+
     http.get(uri).then((value) async {
      Directory? dir = await getTemporaryDirectory();
-     //print(dir);
+
      File file = File('${dir.path}/abc.png');
      path = '${dir.path}/abc.png';
      file.writeAsBytesSync(value.bodyBytes);
-     //print('file created at path $dir/image.png');
     });
   }
 
@@ -32,9 +31,7 @@ class _FileVsMemoryState extends State<FileVsMemory> {
 
   getFilePath()async{
     Directory? dir = await getTemporaryDirectory();
-    //print(dir);
     path = '${dir.path}/abc.png';
-    // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CreateFileImages()));
   }
 
   @override
@@ -90,7 +87,6 @@ class _CreateFileImagesState extends State<CreateFileImages> {
 
   getFilePath()async{
     Directory? dir = await getTemporaryDirectory();
-    //print(dir);
     path = '${dir.path}/abc.png';
     File file = File(path!);
     setState(() {
@@ -119,6 +115,7 @@ class _CreateFileImagesState extends State<CreateFileImages> {
               child: const Icon(Icons.arrow_circle_up_outlined),
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: FloatingActionButton(

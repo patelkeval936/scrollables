@@ -16,7 +16,6 @@ class _ArtAndCultureState extends State<ArtAndCulture> {
   void initState() {
     super.initState();
     controller.addListener(() {
-      print(controller.position.pixels);
       setState(() {
         opacity = controller.position.pixels / 40 > 1 ? 1 : 0;
       });
@@ -36,7 +35,7 @@ class _ArtAndCultureState extends State<ArtAndCulture> {
           backgroundColor: Colors.black54.withOpacity(opacity),
           leading:  IconButton(onPressed : (){
             Navigator.of(context).pop();
-          }, icon: Icon(Icons.arrow_back),),
+          }, icon: const Icon(Icons.arrow_back),),
           title: Row(
             children: [
               opacity >= 1
@@ -146,7 +145,8 @@ class _ArtAndCultureState extends State<ArtAndCulture> {
                       ),
                     );
                   }),
-            )),
+            )
+        ),
       ),
     );
   }
